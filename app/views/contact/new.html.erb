@@ -1,0 +1,73 @@
+<br>
+<br>
+
+<div class="row">
+  <div class="large-6 small-12 columns">
+
+    <%= form_for @message, :url => contact_path, :method => "post" do |form| %>
+      
+
+    <fieldset class="fields small-6">
+      <div class="row">
+        <div class="small-12 medium-12 large-12 columns">
+          <div class="field">
+            <%= form.label :name %>
+            <%= form.text_field :name %>
+          </div>
+        </div>
+      </div>
+
+    <div class="row">
+      <div class="small-12 medium-12 large-12 columns">
+        <div class="field">
+          <%= form.label :company %>
+          <%= form.text_field :company %>
+        </div>
+      </div>
+    </div>
+        
+    <div class="row">
+      <div class="small-12 medium-12 large-12 columns">
+        <div class="field">
+          <%= form.label :email %>
+          <%= form.text_field :email %>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="small-12 medium-12 large-12 columns">    
+        <div class="field">
+          <%= form.label :subject %>
+          <%= form.text_field :subject %>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="small-12 medium-12 large-12 columns">    
+        <div class="field">
+          <%= form.label :body %>
+          <%= form.text_area :body, :placeholder => "Click and drag the bottom right corner to resize." %>
+
+        </div>
+      </div>
+    </div>  
+      
+      
+    <div class="row">
+      <div class="small-12 medium-12 large-12 columns">  
+        <div class="actions text-center">
+          <%= form.submit "Send", class: 'button' %>
+        </div>
+      </div>
+    </div>
+      <% end %>
+    </div>
+    </fieldset>
+
+  <div class="large-6 small-12 columns text-center">
+    <h2>Thanks for taking time to look at my page! </h2>
+    <h3>If you would like to <strong>hire</strong> me or just want to ask me a question then fill out the form to <strong>the left</strong> and I will get back to you within 24 hours. <strong>I promise!</strong></h3>
+  </div>
+</div>
