@@ -31,6 +31,23 @@
       </section>
     </nav>
 
+    <% if flash[:notice] %>
+        <div data-alert class="alert-box success">
+          <a href="#" class="close">&times;</a>
+          <%= flash[:notice] %>
+        </div>
+      <% elsif flash[:error] %>
+        <div data-alert class="alert-box warning">
+          <a href="#" class="close">&times;</a>
+          <%= flash[:notice] %>
+        </div>
+      <% elsif flash[:alert] %>
+        <div data-alert class="alert-box info">
+          <a href="#" class="close">&times;</a>
+          <%= flash[:notice] %>
+        </div>
+      <% end %>
+
     <%= yield %>
     <%= javascript_include_tag "application" %>
   </body>

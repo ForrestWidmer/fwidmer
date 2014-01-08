@@ -4,8 +4,10 @@ class ContactController < ApplicationController
   end
 
   def create
+    @message = Message.new(params[:message])
+
     if params[:message]
-    NotificationsMailer.new_message(params[:message]).deliver
+    ContactMailer.new_email(@message).deliver
     redirect_to(root_path, :notice => "Message was successfully sent.")
     else
     flash[:alert] = "Please fill all fields."

@@ -14,5 +14,7 @@ Fwidmer::Application.routes.draw do
 
   get "welcome/contact"
 
+  resources "contact", only: [:new, :create]
+
   root to: 'welcome#index'
 end

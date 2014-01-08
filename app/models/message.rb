@@ -1,16 +1,14 @@
-class Message
+class Message < ActiveRecord::Base
+  extend ActiveModel::Naming
   include ActiveModel::Validations
   include ActiveModel::Conversion
-  extend ActiveModel::Naming
-  
-  attr_accessor :name, :company, :email, :subject, :body 
+  include ActiveModel::AttributeMethods
+
+  attr_accessible :body, :company, :email, :name, :subject
+
 
   validates :name, :company, :email, :subject, :body, :presence => true
-  validates :email, :format => { :with => %r{.+@.+\..+} }, :allow_blank => true
+  validates :email, :format => { :with => %r{.+@.+\..+} }, :allow_blank => false
   
   
-
-  def persisted?
-    false
-  end
 end
