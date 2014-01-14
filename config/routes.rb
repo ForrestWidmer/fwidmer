@@ -1,6 +1,6 @@
 Fwidmer::Application.routes.draw do
 
-  devise_for :users
+  #devise_for :users
 
   root to: 'welcome#index'
   
@@ -25,10 +25,16 @@ Fwidmer::Application.routes.draw do
   resources "contact", only: [:new, :create]
 
   resources :posts do
-  collection do
-    get :index
+    collection do
+      get :index
+    end
   end
-end
+
+  if Rails.env == 'production'
+    devise_for :users, :controllers => { :registrations => "registrations" } 
+  else
+    devise_for :users, :controllers => { :registrations => "registrations" } 
+  end
   
   
 end

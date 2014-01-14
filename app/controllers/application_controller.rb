@@ -4,4 +4,7 @@ class ApplicationController < ActionController::Base
   rescue_from CanCan::AccessDenied do |exception|
     redirect_to root_url
   end
+  #rescue_from Devise::RegistrationsController do |exception|
+    #redirect_to root_url
+  #end
 end
