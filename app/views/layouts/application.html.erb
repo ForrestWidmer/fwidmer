@@ -6,7 +6,7 @@
 
     <title><%= content_for?(:title) ? yield(:title) : "Forrest Widmer" %></title>
 
-    <%= stylesheet_link_tag    "application" %>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
   </head>
@@ -26,7 +26,13 @@
           <li class="divider"></li>
           <li><%= link_to "Current Project", welcome_updates_path %></li>
           <li class="divider"></li>
+          <li><%= link_to "TidBits", posts_path %></li>
+          <li class="divider"></li>
           <li><%= link_to "Hire Me", contact_new_path %></li>
+          <% if current_user %>
+            <li class="divider"></li>
+              <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
+            <% end %>
         </ul>
       </section>
     </nav>
@@ -42,7 +48,7 @@
           <%= flash[:notice] %>
         </div>
       <% elsif flash[:alert] %>
-        <div data-alert class="alert-box info">
+        <div data-alert class="alert-box warning">
           <a href="#" class="close">&times;</a>
           <%= flash[:notice] %>
         </div>

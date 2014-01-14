@@ -10,58 +10,10 @@
  *
  *= require_self
  *= require foundation_and_overrides
-
+ *= require custom
  *= require_tree .
  */
 
  
-.row {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 1em !important;
-  margin-bottom: 1em !important;
-  max-width: 62.5rem;
-}
 
-body {
-  background-color: #6C6E58 !important;
-}
-
-hr {
-  border: solid #3E423A !important;
-  border-width: 1px 0 0 !important;
-  clear: both !important;
-  margin: 1.25rem 0 1.1875rem !important;
-  height: 0 !important;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !important;
-  font-weight: 300 !important;
-  font-style: normal !important;
-  color: #F4F7D9 !important;
-  text-rendering: optimizeLegibility !important;
-  margin-top: 0.2rem !important;
-  margin-bottom: 0.5rem !important;
-  line-height: 1.4 !important;
-}
-
-A.class1 {color: #417378;}
-A.class1:link  {text-decoration: none; color: #A4CFBE;}
-A.class1:visited {text-decoration: none; color: #A4CFBE;}
-A.class1:hover {text-decoration: underline; color: #A4CFBE;}
-A.class1:active {text-decoration: none; color: #A4CFBE;}
-
-label {
-font-size: 0.875rem !important;
-color: #A4CFBE !important;
-cursor: pointer !important;
-display: block !important;
-font-weight: normal !important;
-margin-bottom: 0.5rem !important;
-}
-
-button:hover, button:focus, .button:hover, .button:focus {
-background-color: #417378 !important;
-}
+ 

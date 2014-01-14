@@ -1,4 +1,11 @@
 Fwidmer::Application.routes.draw do
+
+  devise_for :users
+
+  root to: 'welcome#index'
+  
+
+
   get "contact/new"
 
   #get "contact/create"
@@ -14,7 +21,14 @@ Fwidmer::Application.routes.draw do
 
   get "welcome/contact"
 
+
   resources "contact", only: [:new, :create]
 
-  root to: 'welcome#index'
+  resources :posts do
+  collection do
+    get :index
+  end
+end
+  
+  
 end

@@ -1,0 +1,16 @@
+<div class="panel radius">
+  <div class="row">
+    <div class="small-12 text-center">
+      <h1><%= @post.title %></h1
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="small-12">
+      <p><%= markdown @post.body %></p>
+      <%= link_to 'Edit', edit_post_path(@post), class: 'button' %>
+      <%= link_to 'Back', posts_path, class: 'button' %>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="small-12 text-center">
+    <h1>TidBits</h1>
+    <p>(Small nuggets of information that just may help someone.)</p>
+  </div>
+</div>
+
+
+
+<% @posts.each do |post| %>
+<div class="panel radius">
+  <div class="row">
+    <div class="small-12 text-center">
+      <h1><%= post.title %></h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="small-12">
+      <p><%= markdown post.body %></p>
+      <%= link_to 'View Post', post_path(post), class: 'button' %>
+      <td><%= link_to 'Edit', edit_post_path(post), class: 'button' %></td>
+    </div>
+  </div>
+</div>
+
+  <% end %>
+
+
+<% if can? :create, Post %>
+  <%= link_to 'New Post', new_post_path, class: 'button' %>
+<% end %>
