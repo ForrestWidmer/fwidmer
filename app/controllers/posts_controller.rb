@@ -1,7 +1,9 @@
 class PostsController < ApplicationController
   
   def index
-    @posts = Post.all
+    flash[:notice] = "This feature almost open but not quite!"
+    redirect_to root_path
+    #@posts = Post.all
   end
 
   
