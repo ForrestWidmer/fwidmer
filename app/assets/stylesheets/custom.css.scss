@@ -21,6 +21,10 @@
 .panel h1, .panel h2, .panel h3, .panel h4, .panel h5, .panel h6 {
 color: #a4cfbe !important;
 }
+
+h1 {
+  color: #a4cfbe !important;
+}
  
 p img {
  display: block; 
@@ -57,7 +61,8 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: 300;
   font-style: normal;
-  color: #F4F7D9;
+  color: #a4cfbe !important;
+  // color: #F4F7D9;
   text-rendering: optimizeLegibility;
   margin-top: 0.2rem;
   margin-bottom: 0.5rem;
