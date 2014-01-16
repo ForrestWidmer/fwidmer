@@ -8,7 +8,9 @@
   <div class="row">
     <div class="small-12">
       <p><%= markdown @post.body %></p>
-      <%= link_to 'Edit', edit_post_path(@post), class: 'button' %>
+      <% if can? :edit, Post %>
+        <%= link_to 'Edit', edit_post_path(@post), class: 'button' %>
+      <% end %>
       <%= link_to 'Back', posts_path, class: 'button' %>
     </div>
   </div>
