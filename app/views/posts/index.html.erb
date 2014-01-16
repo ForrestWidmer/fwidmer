@@ -19,7 +19,9 @@
     <div class="small-12">
       <p><%= markdown post.body %></p>
       <%= link_to 'View Post', post_path(post), class: 'button' %>
-      <td><%= link_to 'Edit', edit_post_path(post), class: 'button' %></td>
+      <% if can? :edit, Post %>
+        <td><%= link_to 'Edit', edit_post_path(post), class: 'button' %></td>
+      <% end %>
     </div>
   </div>
 </div>
