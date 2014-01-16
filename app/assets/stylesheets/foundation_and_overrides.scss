@@ -624,7 +624,8 @@ $body-font-color: #A4CFBE;
 // We use these to set default font colors
 $panel-font-color: #a4cfbe;
 $panel-font-color-alt: #a4cfbe;
-$panel-header-adjust: true;
+$panel-header-adjust: false;
+$panel-header-color: #a4cfbe;
 
 $panel-header-adjust: false;
 // $callout-panel-link-color: $primary-color;
