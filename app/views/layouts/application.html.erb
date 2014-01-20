@@ -24,11 +24,11 @@
           <li class="divider"></li>
           <li><%= link_to "About Me", welcome_about_path %></li>
           <li class="divider"></li>
-          <li><%= link_to "Current Project", welcome_updates_path %></li>
+          <li><%= link_to "Personal Projects", welcome_updates_path %></li>
           <li class="divider"></li>
            <li><%= link_to "TidBits", posts_path %></li>
           <li class="divider"></li>
-          <li><%= link_to "Hire Me", contact_new_path %></li>
+          <li><%= link_to "Contact Me", contact_new_path %></li>
           <% if current_user %>
             <li class="divider"></li>
               <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
