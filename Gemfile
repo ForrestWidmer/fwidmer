@@ -34,6 +34,9 @@ gem 'figaro'
 gem 'redcarpet'
 gem 'devise'
 gem 'cancan'
+gem 'friendly_id'
+gem 'metamagic'
+gem 'sitemap_generator'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
