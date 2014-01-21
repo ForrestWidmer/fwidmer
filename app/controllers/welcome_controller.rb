@@ -1,6 +1,4 @@
 class WelcomeController < ApplicationController
-  caches_page :index, :about
-
   def index
   end
 
@@ -10,6 +8,6 @@ class WelcomeController < ApplicationController
   def updates
   end
 
-  def contact
+  def services
   end
 end

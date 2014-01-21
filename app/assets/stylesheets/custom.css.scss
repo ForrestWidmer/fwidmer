@@ -7,6 +7,8 @@
   max-width: 62.5rem;
 }
 
+
+
 .title {
   font-size: 2.75rem !important;
   color: #a4cfbe !important;
@@ -95,4 +97,11 @@ h0 {
   margin-top: 0.2rem;
   margin-bottom: 0.5rem;
   line-height: 1.4;
+}
+
+.orbit-container {
+overflow: hidden;
+width: auto;
+position: relative;
+background: none;
 }

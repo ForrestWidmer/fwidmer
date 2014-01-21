@@ -19,7 +19,7 @@ Fwidmer::Application.routes.draw do
 
   get "welcome/updates"
 
-  get "welcome/contact"
+  get "welcome/services"
 
 
   resources "contact", only: [:new, :create]
