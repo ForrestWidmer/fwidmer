@@ -54,4 +54,8 @@ class PostsController < ApplicationController
 
     redirect_to posts_url
   end
+
+  def sitemap
+    @post = Post.all
+  end
 end

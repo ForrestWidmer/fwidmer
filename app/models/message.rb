@@ -7,7 +7,7 @@ class Message < ActiveRecord::Base
   attr_accessible :body, :company, :email, :name, :subject
 
 
-  validates :name, :company, :email, :subject, :body, :presence => true
+  validates :name, :email, :subject, :body, :presence => true
   validates :email, :format => { :with => %r{.+@.+\..+} }, :allow_blank => false
   
   
