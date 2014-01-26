@@ -34,6 +34,5 @@ Fwidmer::Application.routes.draw do
     devise_for :users, :controllers => { :registrations => "registrations" } 
   end
 
-  match 'sitemap', :to => "sitemap#index", :as => :sitemap  
   
 end

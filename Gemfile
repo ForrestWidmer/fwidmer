@@ -31,6 +31,7 @@ end
 gem 'jquery-rails'
 gem 'mail'
 gem 'figaro'
+gem 'fog'
 gem 'redcarpet'
 gem 'devise'
 gem 'cancan'
@@ -38,6 +39,7 @@ gem 'friendly_id'
 gem 'metamagic'
 gem 'sitemap_generator'
 gem "social-buttons", git: "git://github.com/kristianmandrup/social-buttons.git"
+gem 'unf'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

@@ -1,10 +1,20 @@
 # Set the host name for URL creation
-SitemapGenerator::Sitemap.default_host = "http://www.forrestwidmer.com"
-
+SitemapGenerator::Sitemap.default_host = "http://www.forrestwidmer.com/"
+# pick a place safe to write the files
+SitemapGenerator::Sitemap.public_path = 'tmp/'
+# store on S3 using Fog
+SitemapGenerator::Sitemap.adapter = SitemapGenerator::S3Adapter.new
+# inform the map cross-linking where to find the other maps
+SitemapGenerator::Sitemap.sitemaps_host = "http://s3.amazonaws.com/forrest-fwidmer-sitemap/sitemaps"
+# pick a namespace within your bucket to organize your maps
+SitemapGenerator::Sitemap.sitemaps_path = 'sitemaps/'
 SitemapGenerator::Sitemap.create do
-  add '/welcome'
-  add '/posts'
-  add '/contact'
+  add '/welcome/about'
+  add '/welcome/services'
+  add '/welcome/updates'
+  add '/welcome/posts'
+  add '/welcome/posts/show'
+  add '/welcome/contact/new'
 
   # Put links creation logic here.
   #
@@ -21,9 +31,10 @@ SitemapGenerator::Sitemap.create do
   #
   # Add '/articles'
   #
-  add welcome_index_path, :priority => 0.7, :changefreq => 'weekly'
-  add welcome_about_path, :priority => 0.7, :changefreq => 'weekly'
-  add welcome_updates_path, :priority => 0.7, :changefreq => 'weekly'
+  # add welcome_index_path, :priority => 0.7, :changefreq => 'weekly'
+  # add welcome_about_path, :priority => 0.7, :changefreq => 'weekly'
+  # add welcome_updates_path, :priority => 0.7, :changefreq => 'weekly'
+  # add welcome_services_path, :priority => 0.7, :changefreq => 'weekly'
 
   add posts_path, :priority => 0.7, :changefreq => 'weekly'
 
