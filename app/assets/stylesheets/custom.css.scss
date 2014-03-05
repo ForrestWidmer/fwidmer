@@ -38,7 +38,6 @@ border-width: 1px;
 border-color: #30332D;
 margin-bottom: 1.25rem;
 padding: 1.25rem;
-background: #3e423a;
 }
  
 .panel p {
@@ -61,7 +60,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: 300;
   font-style: normal;
-  color: #F4F7D9;
+  color: white;
   text-rendering: optimizeLegibility;
   margin-top: 0.2rem;
   margin-bottom: 0.5rem;
@@ -69,10 +68,10 @@ h1, h2, h3, h4, h5, h6 {
 }
  
 A.class1 {color: #417378;}
-A.class1:link  {text-decoration: none; color: #A4CFBE;}
-A.class1:visited {text-decoration: none; color: #A4CFBE;}
-A.class1:hover {text-decoration: underline; color: #A4CFBE;}
-A.class1:active {text-decoration: none; color: #A4CFBE;}
+A.class1:link  {text-decoration: none; color: #8f0018;}
+A.class1:visited {text-decoration: none; color: #8f0018;}
+A.class1:hover {text-decoration: underline; color: #8f0018;}
+A.class1:active {text-decoration: none; color: #8f0018;}
  
 label {
 font-size: 0.875rem;
@@ -88,11 +87,11 @@ background-color: #417378;
 }
  
 h0 {
-  font-size: 2.75rem;
+  font-size: 4rem;
   font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: 300;
   font-style: normal;
-  color: black;
+  color: white;
   text-rendering: optimizeLegibility;
   margin-top: 0.2rem;
   margin-bottom: 0.5rem;

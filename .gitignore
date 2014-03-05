@@ -16,3 +16,10 @@
 
 # Ignore application configuration
 /config/application.yml
+
+## generic files to ignore
+*~
+*.lock
+*.DS_Store
+*.swp
+*.out
