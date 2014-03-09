@@ -3,6 +3,8 @@ class WelcomeController < ApplicationController
   end
 
   def about
+    flash[:notice] = "This page is under construction. Sorry."
+    redirect_to root_path
   end
 
   def updates

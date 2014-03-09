@@ -1,33 +1,40 @@
 <% meta :title => "Home | Phoenix Area Web Developer | Websites, Web apps, E-commerce", 
         :description => "Looking to put your company, product, or brand on the web? I'm affordable, personable, and knowledgeable. You'll regret not coming here sooner!", 
         :keywords => %w(website ecommerce phoenix arizona ruby rails developer web application applications small business social media management seo online store programmer coder coding apps) %>
-<br>
-<br>
 
 
-    <div class="panel">
-      <h0>HELLO</h0>
+    <div class="panel text-center font">
+      <h0 class="">"My name is Forrest, and I'm an aggressive web developer who's going to help build your business by bringing more people to your website."</h0>
     </div>
 <br>
 <br>
 
-<dic class="row">
-  <div class="large-12 columns">
-    <div class="row" data-equalizer>
-      <div class="large-6 columns panel" data-equalizer-watch>
-        <h3><%= link_to "Services", welcome_services_path, class: 'class1' %></h3>
-      </div>
-      <div class="large-3 columns panel" data-equalizer-watch>
-        <h3><%= link_to "About Me", welcome_about_path, class: 'class1' %></h3>
-      </div>
-      <div class="large-3 columns panel" data-equalizer-watch>
-        <h3><%= link_to "Personal Projects", welcome_updates_path, class: 'class1' %></h3>
-      </div>
-    </div>
-  </div>
-</div>
 
-<dic class="row">
+<ul class="large-block-grid-4">
+  <li>
+    <%= link_to (image_tag "anvil-and-hammer.jpg", alt: "Services"), welcome_services_path %>
+    <figcaption class="panel"><h3><%= link_to "Services", welcome_services_path, class: 'class1' %></h3></figcaption>
+  </li>
+  <!--<li>
+    <%= link_to (image_tag "me.jpg", alt: "About Me"), welcome_about_path %>
+    <figcaption class="panel"><h3><%= link_to "About Me", welcome_about_path, class: 'class1' %></h3></figcaption>
+  </li>-->
+  <li>
+    <%= link_to (image_tag "castle.jpg", alt: "Personal Projects"), welcome_updates_path %>
+    <figcaption class="panel"><h3><%= link_to "Personal Projects", welcome_updates_path, class: 'class1' %></h3></figcaption>
+  </li>
+  <li>
+    <%= link_to (image_tag "book-bindings.jpg", alt: "Blog"), posts_path %>
+    <figcaption class="panel"><h3><%= link_to "Blog", posts_path, class: 'class1' %></h3></figcaption>
+  </li>
+  <li>
+    <%= link_to (image_tag "mail.jpg", alt: "Contact Me"), contact_new_path %>
+    <figcaption class="panel"><h3><%= link_to "Contact Me", contact_new_path, class: 'class1' %></h3></figcaption>
+  </li>
+</ul>
+
+
+<!--<dic class="row">
   <div class="large-12 columns">
     <div class="row">
       <div class="large-6 columns panel" data-equalizer-watch>
@@ -38,7 +45,7 @@
       </div>
     </div>
   </div>
-</div>   
+</div>   -->
 
 <div class="row" data-equalizer>
   <div class="small-12 medium-12 large-12 columns text-center">

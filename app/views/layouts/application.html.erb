@@ -35,8 +35,8 @@
           <li class="divider"></li>
           <li><%= link_to "Services", welcome_services_path %></li>
           <li class="divider"></li>
-          <li><%= link_to "About Me", welcome_about_path %></li>
-          <li class="divider"></li>
+          <!--<li><%= link_to "About Me", welcome_about_path %></li>
+          <li class="divider"></li>-->
           <li><%= link_to "Personal Projects", welcome_updates_path %></li>
           <li class="divider"></li>
            <li><%= link_to "Blog", posts_path %></li>
@@ -58,20 +58,19 @@
       <% elsif flash[:error] %>
         <div data-alert class="alert-box warning">
           <a href="#" class="close">&times;</a>
-          <%= flash[:notice] %>
+          <%= flash[:error] %>
         </div>
       <% elsif flash[:alert] %>
         <div data-alert class="alert-box warning">
           <a href="#" class="close">&times;</a>
-          <%= flash[:notice] %>
+          <%= flash[:alert] %>
         </div>
       <% end %>
 
     <%= yield %>
+    
     <%= javascript_include_tag "application" %>
-    <script src="/js/vendor/jquery.js"></script>
-    <script src="/js/vendor/fastclick.js"></script>
-    <script src="/js/foundation.min.js"></script>
+    <%= javascript_include_tag "foundation.min.js" %>
     <script>
       $(document).foundation();
     </script>

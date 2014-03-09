@@ -8,9 +8,6 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
 
- .panel h1, .panel h2, .panel h3, .panel h4, .panel h5, .panel h6 {
-color: #a4cfbe !important;
-}
 
  *
  *= require_self
@@ -18,7 +15,3 @@ color: #a4cfbe !important;
  *= require_custom
  *= require_tree .
  */
-
- 
-
- 

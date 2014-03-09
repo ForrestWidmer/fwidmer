@@ -50,9 +50,14 @@ class PostsController < ApplicationController
   
   def destroy
     @post = Post.find(params[:id])
-    @post.destroy
-
-    redirect_to posts_url
+    name = @post.title
+    if @post.destroy
+      flash[:notice] = "\"#{name}\" was successfully removed."
+      redirect_to posts_path
+    else
+      flash[:error] = "There was a problem deleting that, try again."
+      render :show
+    end
   end
 
   def sitemap
