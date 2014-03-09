@@ -59,22 +59,18 @@
       <% elsif flash[:error] %>
         <div data-alert class="alert-box warning">
           <a href="#" class="close">&times;</a>
-          <%= flash[:error] %>
+          <%= flash[:notice] %>
         </div>
       <% elsif flash[:alert] %>
         <div data-alert class="alert-box warning">
           <a href="#" class="close">&times;</a>
-          <%= flash[:alert] %>
+          <%= flash[:notice] %>
         </div>
       <% end %>
 
     <%= yield %>
     
     <%= javascript_include_tag "application" %>
-    <script src="/assets/foundation.alert.js"></script>
-    <%= javascript_include_tag asset_path("foundation") %>
-    <script>
-      $(document).foundation();
-    </script>
+
   </body>
 </html>
